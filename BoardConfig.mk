@@ -129,9 +129,10 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /dev/block/loop%d
 TARGET_USES_MKE2FS := true
 
 # Crypto
-TW_INCLUDE_CRYPTO := false
-TW_INCLUDE_CRYPTO_FBE := false
+TW_INCLUDE_CRYPTO := true
+TW_INCLUDE_CRYPTO_FBE := true
 BOARD_USES_METADATA_PARTITION := true
+TW_USE_FSCRYPT_POLICY := 2
 #BOARD_FORCE_ENCRYPT := false
 #TW_PREPARE_DATA_MEDIA_EARLY := true
 
@@ -153,8 +154,6 @@ TW_BRIGHTNESS_PATH := "/sys/class/backlight/sprd_backlight/brightness"
 TW_MAX_BRIGHTNESS := 4095
 TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone0/temp"
 TW_DEFAULT_BRIGHTNESS := 4095
-TW_LOAD_VENDOR_DLKM_MODULES := "adaptive-ts.ko focaltech_ft8756_spi_ts.ko"
-TW_LOAD_VENDOR_BOOT_MODULES := true
 TW_CUSTOM_BATTERY_PATH := /sys/devices/platform/charger-manager/power_supply/battery
 
 # INCLUDE TWRP CONFIG
@@ -178,4 +177,9 @@ TARGET_USES_LOGD := true
 TWRP_EVENT_LOGGING := true
 
 # Version
-TW_DEVICE_VERSION := X669D-KYROS
+TW_DEVICE_VERSION := X669D-Kyros70
+
+#additional lib for fix decryption
+TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libtrusty \
+    $(TARGET_OUT_VENDOR_SHARED_LIBRARIES)/libtrusty 
