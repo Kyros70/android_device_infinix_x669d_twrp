@@ -11,13 +11,10 @@
 - [x] ADB
 
 Medium checks
-- [x] update.zip sideload
-- [x] UI colors (red/blue inversions)
-- [x] Screen goes off and on
+- [x] Screen turns off and on normally
 - [x] F2FS/EXT4 Support, exFAT/NTFS where supported
 - [x] all important partitions listed in mount/backup lists
-- [x] backup/restore to/from external (USB-OTG) storage
-- [x] backup/restore to/from adb
+- [ ] backup/restore to/from external (USB-OTG) storage
 - [ ] decrypt /data
 - [x] Correct date
 
@@ -29,7 +26,7 @@ Minor checks
 - [x] battery level
 - [x] temperature
 - [ ] encrypted backups
-- [x] input devices via USB (USB-OTG) - keyboard, mouse and disks
+- [ ] input devices via USB (USB-OTG) - keyboard, mouse and disks
 - [ ] USB mass storage export
 - [x] set brightness
 - [ ] vibrate
