@@ -2,7 +2,7 @@
 
 load_panel()
    {
-   	insmod /lib/modules/kfifo_buf.ko
+      insmod /lib/modules/kfifo_buf.ko
       insmod /lib/modules/sensorhub.ko
       insmod /lib/modules/tran_gesture.ko
       insmod /lib/modules/adaptive-ts.ko
