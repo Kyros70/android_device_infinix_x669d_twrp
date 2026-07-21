@@ -37,4 +37,4 @@ Minor checks
 - [x] partition SD card
 
 # Infinix Hot 30i X669D
-![Infinix Hot 30i X669D](https://phonesdata.com/files/models-sm/Infinix-HOT-30i-606.jpg)
+![Infinix Hot 30i X669D](https://phonesdata.com/files/models/Infinix-HOT-30i-606.jpg)
