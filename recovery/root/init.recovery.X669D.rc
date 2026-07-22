@@ -2,21 +2,17 @@
 import /init.recovery.common.rc
 
 on fs
-    start load_modules
-    start prepdecrypt 
-
-#fix decryption
+    start prepdecrypt
+    insmod /lib/modules/kfifo_buf.ko
+    insmod /lib/modules/sensorhub.ko
+    insmod /lib/modules/tran_gesture.ko
+    insmod /lib/modules/adaptive-ts.ko
+    insmod /lib/modules/gpio.ko
+    insmod /lib/modules/focaltech_ft8756_spi_ts.ko
+    insmod /lib/modules/sc27xx-vibra.ko
+    insmod /lib/modules/thermal-generic-adc.ko
 
 service prepdecrypt /system/bin/prepdecrypt.sh
-    oneshot
-    disabled
-    user root
-    group root
-    seclabel u:r:recovery:s0
-
-#fix touch
-
-service load_modules /system/bin/load_modules.sh
     oneshot
     disabled
     user root
@@ -58,7 +54,5 @@ on property:ro.crypto.state=unsupported || property:ro.crypto.state=unencrypted 
     stop gatekeeper-1-0
 
 on boot
-    start keymint-2-0
-    start gatekeeper-1-0
     start boot-hal-1-0
     start health-hal-2-1
