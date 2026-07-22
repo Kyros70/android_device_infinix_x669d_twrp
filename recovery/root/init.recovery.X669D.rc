@@ -10,6 +10,7 @@ on fs
     insmod /lib/modules/gpio.ko
     insmod /lib/modules/focaltech_ft8756_spi_ts.ko
     insmod /lib/modules/sc27xx-vibra.ko
+    insmod /lib/modules/sc27xx_adc.ko
     insmod /lib/modules/thermal-generic-adc.ko
 
 service prepdecrypt /system/bin/prepdecrypt.sh
