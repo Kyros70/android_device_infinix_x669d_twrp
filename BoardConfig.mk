@@ -145,6 +145,7 @@ PLATFORM_VERSION_LAST_STABLE := $(PLATFORM_VERSION)
 # TWRP Configuration
 TW_FRAMERATE := 60
 TW_THEME := portrait_hdpi
+TW_SCREEN_BLANK_ON_BOOT := true
 TW_EXTRA_LANGUAGES := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_TOOLBOX := true
@@ -154,10 +155,6 @@ TW_MAX_BRIGHTNESS := 4095
 TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone1/temp"
 TW_DEFAULT_BRIGHTNESS := 4095
 TW_CUSTOM_BATTERY_PATH := /sys/devices/platform/charger-manager/power_supply/battery
-TW_USE_LEGACY_BATTERY_SERVICES := true
-TW_LOAD_VENDOR_BOOT_MODULES := true
-TW_USES_VENDOR_LIBS:= true
-TW_LOAD_VENDOR_MODULES:= true
 TW_Y_OFFSET := 47
 TW_H_OFFSET := -47
 
