@@ -1,12 +1,8 @@
-# Twrp fstab file - RadGoodNow & arturmes
+/system_image_a          emmc     /dev/block/mapper/system_a                   flags=backup=0;flashimg;display="System Image A"
+/system_ext_image_a      emmc     /dev/block/mapper/system_ext_a               flags=backup=0;flashimg;display="System_ext Image A"
+/vendor_image_a          emmc     /dev/block/mapper/vendor_a                   flags=backup=0;flashimg;display="Vendor Image A"
 
-# <mount_point>        <fstype>        <device>              <device2>                              <flags>
-/system_image_a          emmc     /dev/block/by-name/system_a                  flags=display="System image A";slotselect;backup=1;flashimg=1
-/system_image_b          emmc     /dev/block/by-name/system_b                  flags=display="System image B";slotselect;backup=1;flashimg=1
-/vendor_image_a          emmc     /dev/block/by-name/vendor_a                  flags=display="Vendor image A";slotselect;backup=1;flashimg=1
-/vendor_image_b          emmc     /dev/block/by-name/vendor_b                  flags=display="Vendor image B";slotselect;backup=1;flashimg=1
 # Dynamic Partitions
-/vendor                  erofs    /dev/block/mapper/vendor                     flags=display="Vendor";slotselect;backup=1
 /boot                    emmc     /dev/block/by-name/boot                      flags=display=Boot;slotselect;backup=1;flashimg=1
 /dtbo                    emmc     /dev/block/by-name/dtbo                      flags=display=dtbo;slotselect;backup=1
 /misc                    emmc     /dev/block/by-name/misc                      flags=display=misc;backup=1
